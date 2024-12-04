@@ -8,6 +8,7 @@ if (attendance() === 1) {
 }
 else {
     console.log("Employee is Absent");
+    console.log("Employee is Absent");
 }
 
 // UC2
