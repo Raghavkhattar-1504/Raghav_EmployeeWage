@@ -50,9 +50,6 @@ function wageCalculator() {
             break;
     }
     }
-    else{
-        console.log("The employee is Absent");
-    }
     return wage;
 }
 
