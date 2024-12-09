@@ -32,43 +32,45 @@ else{
 }
 
 // UC3
-function wageCalculator() {
+function hourCalculator() {
     const timing = Math.floor(Math.random() * 3);
-    let wage = 0;
+    let hours = 0;
     if(attendance() ===1){
     switch (timing) {
         case 0:
-            console.log("The employee wage for full day is $160");
-            wage = 160;
+            console.log("The working hours for full day is 8 hours");
+            hours = 8;
             break;
         case 1:
-            console.log("The employee wage for half day is $80");
-            wage = 80;
+            console.log("The working hours for half day is 4 hours");
+            hours = 4;
             break;
         case 2:
-            console.log("The employee wage for no working is $0");
+            console.log("The working hours for no working is 0 hours");
+            hours = 0;
+            break;
         default:
             break;
     }
     }
-    return wage;
+    return hours;
 }
 
-wageCalculator();
+hourCalculator();
 
 
 // UC4
 
 let day = 0;
-let totalWage = 0;
+let totalhour = 0;
 while (day !== 20) {
-    let wage = wageCalculator();
-    if (wage !== 0) {
-        totalWage += wage; 
+    let workinghours = hourCalculator();
+    if (workinghours !== 0) {
+        totalhour += workinghours; 
     }
     day++;
 }
-console.log(totalWage);
+console.log("The wage for a month is $"+  totalhour*20);
 
 
 // UC5
